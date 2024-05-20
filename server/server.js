@@ -2,6 +2,7 @@ const express = require('express');
 const dbconnect=require('./config/db_connect');
 const Users = require('./model/user');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 dbconnect();
@@ -50,6 +51,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", require("./routes"));
 
-app.listen(8080,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("server is connected")
 });

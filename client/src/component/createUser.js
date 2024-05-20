@@ -17,7 +17,7 @@ const CreateUser = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
 
       <form onSubmit={(e) => e.preventDefault()}>
         <input
